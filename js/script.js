@@ -24,13 +24,25 @@ form.onsubmit = event => {
   displayResultMessage(result)
 }
 
+function lowWeightOrObesity(result) {
+  if (result <= 21) {
+    return "Baixo peso"
+  } else if (result >= 32) {
+    return "Obesidade"
+  } else {
+    return "Peso normal"
+  }
+}
+
 function displayResultMessage(result) {
-  const message = `Seu IMC é de ${result}`
+  const resultIMC = lowWeightOrObesity(result)
+
+  const message = `Seu IMC é de ${result}
+  ${resultIMC}`
   
   Modal.messege.innerText = message
   Modal.open()
 }
-
 
 
 
