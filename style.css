@@ -147,6 +147,10 @@ form button:hover {
   transform: scale(1.1);
 }
 
+h2 {
+  text-align: center;
+}
+
 
 /* Alert Error */
 .alert-error.open {
